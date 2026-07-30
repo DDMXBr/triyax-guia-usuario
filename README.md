@@ -1,6 +1,6 @@
 # Guia do Usuário
 
-**Última atualização:** 30/07/2026
+**Última atualização:** [30/07/2026](novidades.md)
 
 ---
 
