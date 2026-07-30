@@ -1,5 +1,7 @@
 - [Guia do Usuário](/)
 
+- [Novidades](novidades.md)
+
 - [Gestão de Campo](gestao-de-campo.md#gestão-de-campo)
   - [Mapa Online](gestao-de-campo.md#mapa-online)
   - [Rotas Percorridas](gestao-de-campo.md#rotas-percorridas)

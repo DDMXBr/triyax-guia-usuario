@@ -1,11 +1,12 @@
 # Guia do Usuário
 
-**Última atualização:** 14/07/2026
+**Última atualização:** 30/07/2026
 
 ---
 
 ## Índice
 
+- [Novidades](novidades.md)
 - [Gestão de Campo](gestao-de-campo.md)
   - [Mapa Online](gestao-de-campo.md#mapa-online)
   - [Rotas Percorridas](gestao-de-campo.md#rotas-percorridas)
