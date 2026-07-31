@@ -6,6 +6,8 @@
 
 Esta tela permite consultar e exportar os registros de checklist realizados pelos motoristas nos veículos da frota. É possível visualizar na tela os itens verificados, o resultado de cada item e os arquivos anexados, ou gerar um relatório em PDF ou Excel para análise posterior.
 
+![Tela de Consultar Checklists](images/checklists-consultar.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -99,6 +101,8 @@ Como usar:
 **Caminho:** Checklists > Configurar Checklists
 
 Esta tela permite criar, editar e gerenciar os modelos de checklist utilizados pelos motoristas durante a operação. Cada configuração define quais itens serão verificados, o tipo de equipamento utilizado e quais veículos receberão o checklist.
+
+![Tela de Configurar Checklists](images/checklists-configurar.png)
 
 ---
 
