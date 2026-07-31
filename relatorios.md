@@ -6,6 +6,8 @@
 
 A tela de **Relatórios** é a central de geração e consulta de relatórios da frota. Nela você solicita novos relatórios sobre os veículos — como rotas percorridas, excesso de velocidade, quilometragem e avisos — e acompanha a lista de relatórios já gerados, podendo baixá-los em PDF ou Excel assim que ficarem prontos.
 
+![Tela de Relatórios](images/relatorios.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -166,6 +168,8 @@ Como usar:
 **Caminho:** Relatórios > Relatórios Agendados
 
 A tela de **Relatórios Agendados** permite programar o envio automático de relatórios da frota por e-mail, sem precisar gerá-los manualmente a cada vez. Você cria um agendador escolhendo os veículos, a periodicidade e os relatórios desejados, e o sistema envia os arquivos em PDF ou Excel diretamente para os e-mails cadastrados.
+
+![Tela de Relatórios Agendados](images/relatorios-agendados.png)
 
 ---
 

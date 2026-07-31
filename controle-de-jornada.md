@@ -6,6 +6,8 @@
 
 Esta tela permite consultar e analisar o histórico de jornadas de trabalho dos motoristas e dos veículos da frota em um período determinado. Ela reúne as mensagens de controle de jornada registradas pelo equipamento de cada veículo, exibindo-as organizadas por motorista ou por veículo, com um gráfico de alocação de tempo para cada dia consultado.
 
+![Tela de Consultar Jornadas](images/jornadas-consultar.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -172,6 +174,8 @@ Como usar:
 **Caminho:** Controle de Jornada > Configurar Jornadas
 
 Esta tela permite cadastrar e gerenciar as configurações de mensagens de jornada que serão enviadas aos equipamentos instalados nos veículos. Cada configuração define os textos que aparecerão no dispositivo do motorista para cada evento de jornada — como início de jornada, refeição, manutenção, entre outros — de acordo com o tipo de equipamento utilizado.
+
+![Tela de Configurar Jornadas](images/jornadas-configurar.png)
 
 ---
 

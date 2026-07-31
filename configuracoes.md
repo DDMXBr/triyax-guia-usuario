@@ -6,6 +6,8 @@
 
 Esta tela permite definir quais tipos de aviso podem aparecer no Quadro de Avisos e escolher as cores usadas para representar cada um deles. As configurações feitas aqui afetam diretamente como os avisos são exibidos nas telas de Quadro de Avisos e Quadro de Avisos Telemetria.
 
+![Tela de Configuração de Quadro de Avisos](images/configuracoes-quadro-avisos.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -94,6 +96,8 @@ Como usar:
 **Caminho:** Configurações > Configuração de Rotas por Checkpoint
 
 Esta tela permite cadastrar trajetos de referência, chamados de rotas por checkpoint, que servem para acompanhar se os veículos estão passando pelos pontos esperados. Cada rota é desenhada em um mapa e pode ser vinculada a áreas específicas da frota.
+
+![Tela de Configuração de Rotas por Checkpoint](images/configuracoes-rotas-checkpoint.png)
 
 ---
 
@@ -232,6 +236,8 @@ Como usar:
 
 Esta tela permite configurar avisos que são disparados quando um veículo demora mais do que o esperado para concluir um percurso. Cada configuração define os tempos de referência, os veículos monitorados e quem deve ser avisado por e-mail.
 
+![Tela de Alerta de Tempo de Percurso](images/configuracoes-alerta-tempo-percurso.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -336,6 +342,8 @@ Como usar:
 **Caminho:** Configurações > Alerta de Aceleração
 
 Esta tela permite configurar avisos disparados quando um veículo realiza manobras bruscas, como acelerações, freadas ou curvas fora dos limites definidos. Cada configuração define os valores de referência, os veículos monitorados e quem deve ser avisado por e-mail.
+
+![Tela de Alerta de Aceleração](images/configuracoes-alerta-aceleracao.png)
 
 ---
 
@@ -496,6 +504,8 @@ Como usar:
 **Caminho:** Configurações > Configuração de Pânico
 
 Esta tela permite configurar quem deve ser avisado quando um veículo aciona o pânico, definindo os contatos que recebem o alerta e os contatos que recebem as posições do veículo enquanto o pânico estiver ativo.
+
+![Tela de Configuração de Pânico](images/configuracoes-panico.png)
 
 ---
 

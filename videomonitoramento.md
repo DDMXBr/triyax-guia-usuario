@@ -6,6 +6,8 @@
 
 A tela de **Stream de Vídeo** permite assistir, em tempo real, às imagens das câmeras instaladas nos veículos da sua frota. Além do vídeo ao vivo, a tela mostra a localização atual do veículo em um mapa e um painel com as informações mais recentes dele, tudo em um único lugar.
 
+![Tela de Stream de Vídeo](images/video-stream.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -86,6 +88,8 @@ Como usar:
 **Caminho:** Videomonitoramento > Playback
 
 A tela de **Playback** permite localizar e assistir às gravações feitas pelas câmeras instaladas nos veículos da sua frota. Você escolhe o veículo, a data e os canais de câmera desejados, e a tela lista todas as gravações disponíveis daquele dia para reprodução.
+
+![Tela de Playback](images/video-playback.png)
 
 ---
 
@@ -170,6 +174,8 @@ Como usar:
 **Caminho:** Videomonitoramento > Video Wall
 
 A tela de **Video Wall** permite assistir, ao mesmo tempo, às imagens das câmeras de vários veículos da sua frota. Diferente da tela de Stream de Vídeo, que mostra apenas um veículo por vez, aqui você monta um painel com várias câmeras lado a lado, ideal para acompanhar a frota em tempo real.
+
+![Tela de Video Wall](images/video-wall.png)
 
 ---
 

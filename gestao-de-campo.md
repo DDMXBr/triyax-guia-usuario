@@ -6,6 +6,8 @@
 
 Esta tela permite acompanhar em tempo real a localização e a situação de todos os veículos da frota em um mapa interativo. É a principal ferramenta de monitoramento diário da operação, reunindo informações de posição, telemetria e status de cada veículo em um único lugar.
 
+![Tela de Mapa Online](images/gestao-mapa-online.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -309,6 +311,8 @@ Como usar:
 
 Esta tela permite consultar e visualizar no mapa os percursos realizados por um veículo em um dia específico. É utilizada para analisar o histórico de deslocamentos, verificar distâncias percorridas, tempos de parada e dados de telemetria ao longo de cada rota.
 
+![Tela de Rotas Percorridas](images/gestao-rotas-percorridas.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -493,6 +497,8 @@ Como usar:
 
 Esta tela permite identificar quais veículos da frota estiveram em uma determinada região geográfica durante um período informado. É utilizada para investigar passagens ou paradas próximas a um endereço específico, facilitando auditorias, verificações operacionais e apurações de ocorrências.
 
+![Tela de Flashback](images/gestao-flashback.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -669,6 +675,8 @@ Como usar:
 
 Esta tela gera uma visualização em mapa que destaca, por meio de cores, as regiões onde um ou mais veículos da frota circularam com maior frequência em um determinado período. É uma ferramenta de análise histórica que ajuda a identificar rotas repetidas, pontos de concentração de paradas e comportamentos de deslocamento da operação.
 
+![Tela de Mapa de Calor](images/gestao-mapa-calor.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -809,6 +817,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Quadro de Avisos
 
 Esta tela centraliza todos os eventos e alertas gerados pelos veículos da frota em um período de tempo. Permite consultar ocorrências como excesso de velocidade, entradas e saídas de áreas, alarmes, alertas de manutenção e eventos de fadiga do motorista, facilitando o acompanhamento e a tomada de ação da equipe de monitoramento.
+
+![Tela de Quadro de Avisos](images/gestao-quadro-avisos.png)
 
 ---
 
@@ -997,6 +1007,8 @@ Como usar:
 
 Esta tela exibe os alertas gerados pelo sistema a partir de dados de telemetria embarcada dos veículos, como comportamento do motor, fadiga do motorista e eventos detectados por sensores ADAS. É voltada para o monitoramento de eventos de natureza técnica e de segurança ativa, complementando o Quadro de Avisos convencional com informações mais detalhadas sobre o desempenho veicular.
 
+![Tela de Quadro de Avisos Telemetria](images/gestao-quadro-avisos-telemetria.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -1164,6 +1176,8 @@ Como usar:
 
 Esta tela permite configurar regras automáticas de notificação quando um veículo permanece parado por tempo superior ao permitido. Cada alerta define limiares de tempo para três níveis de situação — normal, alerta e crítico — e pode ser associado a veículos e áreas específicas, com agendamento de horários de vigência.
 
+![Tela de Alerta de Parada](images/gestao-alerta-parada.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -1323,6 +1337,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Áreas de Interesse
 
 Esta tela permite cadastrar, configurar e gerenciar as áreas geográficas delimitadas que serão monitoradas pelo sistema. Cada área de interesse pode gerar alertas automáticos quando veículos entram, saem ou permanecem além do tempo permitido dentro dela, além de controlar limites de velocidade específicos por região.
+
+![Tela de Áreas de Interesse](images/gestao-area-interesse.png)
 
 ---
 
@@ -1626,6 +1642,8 @@ Como usar:
 
 Esta tela permite cadastrar e gerenciar pontos de referência geográficos identificados por um marcador e um raio circular. Diferente das áreas de interesse, que são delimitadas por polígonos desenhados, cada ponto de interesse é definido por uma localização central e um raio de atuação em metros, gerando alertas quando veículos entram ou saem dessa área circular.
 
+![Tela de Pontos de Interesse](images/gestao-ponto-interesse.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -1813,6 +1831,8 @@ Como usar:
 
 Esta tela permite cadastrar e gerenciar perfis de limite de velocidade que serão monitorados pela plataforma. Cada perfil define velocidades máximas permitidas — em condições normais e em condições de chuva — e pode ser aplicado a grupos de veículos específicos, com configurações de notificação por e-mail.
 
+![Tela de Limite de Velocidade](images/gestao-limite-velocidade.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -1907,6 +1927,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Aviso de Periféricos
 
 Esta tela permite configurar avisos automáticos com base em leituras dos periféricos instalados nos veículos, como entradas analógicas, entradas e saídas digitais, contadores e dados de telemetria embarcada. Cada aviso define uma regra de disparo que, ao ser atingida, pode notificar a equipe por e-mail ou acionar uma integração externa.
+
+![Tela de Aviso de Periféricos](images/gestao-aviso-periferico.png)
 
 ---
 
@@ -2049,6 +2071,8 @@ Condições adicionais que refinam quando o aviso deve ou não ser gerado.
 
 Esta tela permite analisar, em forma de gráficos, os dados captados pelos sensores de um veículo ao longo de um período. É utilizada para investigar o comportamento do veículo — como variações de velocidade, bateria, temperatura, entradas e saídas digitais — em um intervalo de tempo específico.
 
+![Tela de Telemetria](images/gestao-telemetria.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -2163,6 +2187,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Alarme
 
 Esta tela permite configurar as regras de alarme para cada veículo da frota. Para cada veículo é possível definir o tipo de alarme monitorado, ativar ou desativar o alarme, informar um e-mail para notificações, controlar a exibição no mapa online, configurar o envio automático de bloqueio e agendar os períodos em que o alarme deve estar em funcionamento.
+
+![Tela de Alarme](images/gestao-alarme.png)
 
 ---
 
@@ -2354,6 +2380,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Rotas Programadas
 
 Esta tela permite cadastrar e gerenciar rotas geográficas predefinidas que os veículos devem seguir. Cada rota é delimitada por um polígono desenhado no mapa e pode gerar alertas automáticos de velocidade, entrada, saída e permanência — além de controlar pontos de início e fim do percurso com raios de tolerância configuráveis.
+
+![Tela de Rotas Programadas](images/gestao-rotas-programadas.png)
 
 ---
 
@@ -2577,6 +2605,8 @@ Como usar:
 **Caminho:** Gestão de Campo > Controle de Motoristas
 
 Esta tela centraliza o cadastro e a gestão de todos os motoristas da frota. Permite criar, editar, pesquisar e remover motoristas, além de configurar dados de identificação, jornada de trabalho, documentos e vínculos com veículos.
+
+![Tela de Controle de Motoristas](images/gestao-controle-motoristas.png)
 
 ---
 

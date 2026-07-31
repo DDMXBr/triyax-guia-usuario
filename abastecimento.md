@@ -6,6 +6,8 @@
 
 Esta tela permite consultar, registrar e gerenciar os abastecimentos e recargas elétricas realizados pelos veículos da frota. Os registros podem ser agrupados por dia, veículo ou motorista, e exportados em PDF ou Excel para fins de controle e auditoria.
 
+![Tela de Abastecimentos](images/abastecimento.png)
+
 ---
 
 #### O que você encontra nesta tela

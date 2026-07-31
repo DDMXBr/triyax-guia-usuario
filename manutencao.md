@@ -6,6 +6,8 @@
 
 Esta tela permite gerenciar o catálogo de peças e insumos utilizados nas manutenções da frota. Aqui você cadastra, edita, remove e importa itens que poderão ser vinculados a ordens de manutenção preventiva e corretiva.
 
+![Tela de Cadastro de Peças/Itens](images/manutencao-pecas.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -142,6 +144,8 @@ Como usar:
 **Caminho:** Manutenção > Manutenção Preventiva
 
 Esta tela centraliza o controle das manutenções preventivas da frota. Nela você cadastra planos de manutenção por data, quilometragem ou horímetro, acompanha o status de cada item, registra a execução das manutenções e mantém um histórico completo por veículo.
+
+![Tela de Manutenção Preventiva](images/manutencao-preventiva.png)
 
 ---
 
@@ -340,6 +344,8 @@ Como usar:
 **Caminho:** Manutenção > Manutenção Corretiva
 
 Esta tela registra manutenções não planejadas realizadas nos veículos da frota — ocorrências imprevistas como quebras, falhas e reparos emergenciais. Diferente da manutenção preventiva, não há agendamento: o registro é feito após o evento ocorrer.
+
+![Tela de Manutenção Corretiva](images/manutencao-corretiva.png)
 
 ---
 

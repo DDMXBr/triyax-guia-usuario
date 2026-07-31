@@ -6,6 +6,8 @@
 
 A tela de **Relatórios de Motoristas** é a central de geração e consulta de relatórios focados na conduta e na jornada dos motoristas da frota. Nela você solicita relatórios como excesso de velocidade, rotas percorridas, jornada de trabalho e análise de descanso, acompanha o processamento de cada solicitação e baixa os arquivos prontos em PDF ou Excel.
 
+![Tela de Relatórios de Motoristas](images/relatorios-motoristas.png)
+
 ---
 
 #### O que você encontra nesta tela
@@ -144,6 +146,8 @@ Como usar:
 **Caminho:** Relatórios de Motoristas > Relatórios Agendados de Motoristas
 
 A tela de **Relatórios Agendados de Motoristas** permite criar agendadores: rotinas que geram relatórios de motoristas automaticamente, em intervalos regulares, e os enviam por e-mail. Em vez de solicitar o mesmo relatório manualmente toda semana ou todo mês, você configura o agendamento uma única vez e passa a receber os arquivos na sua caixa de entrada.
+
+![Tela de Relatórios Agendados de Motoristas](images/relatorios-motoristas-agendados.png)
 
 ---
 
