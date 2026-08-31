@@ -159,6 +159,8 @@ Localizado no topo da tela, abre o formulário para cadastrar um novo plano de m
 
 Painel expansível logo abaixo do botão principal. Contém checkboxes para filtrar por situação das manutenções, os campos **Data Inicial** e **Data Final** para restringir o período consultado e um botão para selecionar veículos específicos. Após configurar os filtros, clique em **Buscar** para aplicar.
 
+A tela já abre com o **último mês** preenchido nos campos de data e com a tabela carregada, sem precisar de uma busca manual. Cada campo de data traz um botão **x** para limpá-lo, liberando aquela ponta do período.
+
 **Barra de ações da tabela**
 
 Dois ícones acima da tabela: **download** (exportar para planilha) e **upload** (importar manutenções em lote).
@@ -212,11 +214,14 @@ Como usar:
    - **Realizadas** — manutenções já executadas.
    - **Cadastradas** — planos cadastrados ainda dentro do prazo.
    - **Realização imediata** — manutenções pendentes, próximas do vencimento.
-2. Informe a **Data Inicial** e a **Data Final** para restringir a busca a um período. As datas são comparadas com a coluna **Data de Início da Manutenção**.
-3. Para filtrar por veículo, clique no ícone de seleção de veículos e escolha os desejados na janela que abrir.
-4. Clique em **Buscar** para atualizar a tabela.
+2. Ajuste a **Data Inicial** e a **Data Final**, que já vêm preenchidas com o último mês. As datas são comparadas com a coluna **Data de Início da Manutenção**.
+3. Para consultar sem limite de período, clique no **x** dentro do campo de data que deseja liberar. O botão aparece sempre que o campo tem uma data preenchida.
+4. Para filtrar por veículo, clique no ícone de seleção de veículos e escolha os desejados na janela que abrir.
+5. Clique em **Buscar** para atualizar a tabela.
 
 > **Dica:** Use o checkbox **Selecionar/Desselecionar todos** para marcar ou desmarcar todas as situações de uma vez. As situações podem ser combinadas livremente — por exemplo, marcar **Atrasadas** e **Realização imediata** ao mesmo tempo exibe corretamente os dois grupos de manutenções pendentes de atenção.
+
+> **Dica:** Limpar os dois campos de data faz a busca varrer o histórico inteiro da conta, o que pode ser lento em contas com muitas manutenções. Prefira estreitar o período quando estiver procurando um registro específico.
 
 > **Dica:** A busca e a ordenação passaram a ser processadas no servidor, e a tabela traz apenas a página que está sendo exibida. Isso deixa a tela rápida mesmo em contas com muitas manutenções cadastradas: ao trocar de página, ordenar por uma coluna ou mudar a quantidade de itens por página, os dados são buscados novamente já filtrados.
 
@@ -340,8 +345,8 @@ Como usar:
 | Filtro: Realizadas | Exibe apenas manutenções já executadas |
 | Filtro: Cadastradas | Exibe apenas planos dentro do prazo (ainda não vencidos) |
 | Filtro: Realização imediata | Exibe manutenções próximas do vencimento |
-| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada |
-| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada |
+| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada. Vem preenchida com um mês atrás; o botão **x** limpa o campo e remove esse limite |
+| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada. Vem preenchida com a data de hoje; o botão **x** limpa o campo e remove esse limite |
 | Seleção de veículos | Restringe a lista a um ou mais veículos específicos |
 
 [↑ Voltar ao Índice](index.md#índice)
@@ -367,6 +372,8 @@ No topo da tela, abre o formulário para registrar uma nova manutenção correti
 **Painel de Filtros**
 
 Painel expansível com os campos **Data Inicial** e **Data Final**, para restringir o período consultado, e um botão de seleção de veículos que abre a mesma janela usada na Manutenção Preventiva. Escolha o período e os veículos e clique em **Buscar**.
+
+A tela já abre com o **último mês** preenchido nos campos de data e com a tabela carregada, sem precisar de uma busca manual. Cada campo de data traz um botão **x** para limpá-lo, liberando aquela ponta do período.
 
 **Barra de ações da tabela**
 
@@ -420,12 +427,15 @@ Restringe a tabela às manutenções de um intervalo de datas e de veículos esp
 
 Como usar:
 
-1. No painel **Filtro**, informe a **Data Inicial** e a **Data Final**. As datas são comparadas com a data de início exibida na coluna **Período**.
-2. Clique no ícone de seleção de veículos (ícone de carros) para abrir a janela de escolha de veículos, marque os desejados e confirme.
-3. Clique em **Buscar** para carregar os registros correspondentes.
-4. Para ver todos os veículos novamente, limpe a seleção e clique em **Buscar**.
+1. No painel **Filtro**, ajuste a **Data Inicial** e a **Data Final**, que já vêm preenchidas com o último mês. As datas são comparadas com a data de início exibida na coluna **Período**.
+2. Para consultar sem limite de período, clique no **x** dentro do campo de data que deseja liberar. O botão aparece sempre que o campo tem uma data preenchida.
+3. Clique no ícone de seleção de veículos (ícone de carros) para abrir a janela de escolha de veículos, marque os desejados e confirme.
+4. Clique em **Buscar** para carregar os registros correspondentes.
+5. Para ver todos os veículos novamente, limpe a seleção e clique em **Buscar**.
 
 > **Dica:** A seleção de veículos passou a usar a mesma janela da Manutenção Preventiva, no lugar da árvore que ficava embutida na tela — o comportamento é idêntico nas duas telas.
+
+> **Dica:** Limpar os dois campos de data faz a busca varrer o histórico inteiro da conta, o que pode ser lento em contas com muitas manutenções. Prefira estreitar o período quando estiver procurando um registro específico.
 
 > **Dica:** A busca, a paginação e a ordenação são processadas no servidor, e a tabela carrega apenas a página exibida. Trocar de página, ordenar por uma coluna ou alterar a quantidade de itens por página refaz a consulta já com os filtros aplicados.
 
@@ -511,8 +521,8 @@ Como usar:
 | Oficina | Nome da oficina onde a manutenção foi realizada (com busca e opção de cadastrar nova); a busca inclui áreas cadastradas como oficina ou como concessionária |
 | Descrição do serviço | Detalhamento técnico do que foi executado |
 | Observação | Campo livre para anotações complementares |
-| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada |
-| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada |
+| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada. Vem preenchida com um mês atrás; o botão **x** limpa o campo e remove esse limite |
+| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada. Vem preenchida com a data de hoje; o botão **x** limpa o campo e remove esse limite |
 | Seleção de veículos (filtro) | Abre a janela de escolha de veículos, a mesma usada na Manutenção Preventiva, para definir quais veículos terão suas manutenções exibidas na tabela |
 
 [↑ Voltar ao Índice](index.md#índice)
