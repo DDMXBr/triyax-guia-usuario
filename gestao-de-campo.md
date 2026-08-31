@@ -20,6 +20,20 @@ Esta tela permite acompanhar em tempo real a localização e a situação de tod
 
 Acessado pelo botão **Veículos** na barra de ações. Desliza a partir da direita da tela e exibe a lista de veículos organizada em grupos. Permite selecionar quais veículos serão exibidos no mapa por meio de caixas de seleção.
 
+**Painel de Status (lado esquerdo do mapa)**
+
+Painel recolhível ancorado à esquerda do mapa, aberto por padrão, com a lista vertical das 10 situações possíveis dos veículos. Cada linha traz o ícone e a cor da situação e dois números no formato **selecionados / frota**:
+
+- **selecionados** — quantos veículos daquela situação estão marcados no painel lateral de veículos
+- **frota** — quantos veículos daquela situação existem na conta inteira
+
+No topo do painel, os mesmos dois números aparecem somados, dando o total de veículos selecionados e o total da frota. Clicar em uma linha filtra o mapa por aquela situação.
+
+À direita do painel ficam dois botões flutuantes:
+
+- **Mostrar/ocultar rótulos** (ícone de setas) — alterna entre o painel estreito, só com ícones e números, e o painel largo, com o nome de cada situação escrito
+- **Limpar filtros** (ícone de funil com "x") — aparece apenas quando há filtro ativo e desfaz a filtragem por situação
+
 **Grid de Monitoramento**
 
 Tabela que pode ser aberta na parte inferior da tela ou em uma janela separada. Exibe os veículos selecionados no painel lateral em formato de lista, com colunas configuráveis.
@@ -69,6 +83,32 @@ Como usar:
 4. O mapa será atualizado automaticamente para exibir apenas os veículos selecionados.
 
 > **Dica:** Selecione um grupo inteiro marcando a caixa do grupo para incluir todos os veículos daquele conjunto de uma só vez.
+
+**Acompanhar a contagem de veículos por situação**
+
+Mostra, sem sair do mapa, quantos veículos estão em cada situação — parados, em movimento, sem conexão, bloqueados, e assim por diante — tanto na seleção atual quanto na frota inteira.
+
+Como usar:
+
+1. Localize o **Painel de Status** à esquerda do mapa. Ele abre automaticamente ao entrar na tela.
+2. Leia cada linha no formato **selecionados / frota**: o primeiro número são os veículos daquela situação que estão marcados no painel de veículos, o segundo são todos os veículos daquela situação na conta.
+3. Para ver o nome de cada situação escrito por extenso, clique no botão de **rótulos** (ícone de setas) à direita do painel.
+4. Para recolher o painel e liberar espaço do mapa, clique no ícone de funil no topo dele.
+
+> **Dica:** As contagens são atualizadas sozinhas conforme a telemetria chega. Um veículo que sai de "parado" para "em movimento" muda de linha na hora, sem precisar recarregar a tela.
+
+**Filtrar os veículos do mapa por situação**
+
+Deixa no mapa apenas os veículos de uma ou mais situações, útil para tratar rapidamente um grupo de ocorrências — por exemplo, ver só os veículos sem conexão ou só os que estão acima do limite de velocidade.
+
+Como usar:
+
+1. No **Painel de Status**, clique na linha da situação desejada. Os veículos daquela situação passam a ficar marcados no painel de veículos e o mapa é ajustado.
+2. Clique em outras linhas para somar mais situações ao filtro.
+3. Clique novamente em uma linha marcada para retirá-la do filtro.
+4. Para desfazer tudo de uma vez, clique no botão **Limpar filtros** (ícone de funil com "x") à direita do painel.
+
+> **Dica:** Linhas com contagem zero na frota não podem ser clicadas — não há o que filtrar. Com o filtro ativo, quando a telemetria move um veículo para dentro ou para fora da situação filtrada, o mapa acrescenta ou remove apenas aquele veículo, mantendo o enquadramento atual da câmera.
 
 **Consultar legenda de situações dos veículos**
 
@@ -262,6 +302,20 @@ Como usar:
 
 > **Dica:** Após o bloqueio, o ícone do veículo no mapa será atualizado para refletir o status de bloqueado (cadeado amarelo).
 
+**Reenviar bloqueio ou desbloqueio**
+
+Quando um comando de bloqueio ou desbloqueio foi enviado e o veículo ainda não confirmou a execução, é possível reenviar o comando sem precisar aguardar indefinidamente.
+
+Como usar:
+
+1. Clique sobre o ícone do veículo no mapa.
+2. No rodapé do painel, clique no botão de menu adicional (três pontos verticais).
+3. Enquanto o veículo estiver aguardando a confirmação, aparece a opção **Reenviar Bloqueio** ou **Reenviar Desbloqueio**, conforme o comando pendente.
+4. Se a opção estiver desabilitada, o próprio item informa quanto tempo ainda falta para o reenvio ser liberado.
+5. Com a opção habilitada, clique nela para reenviar o comando.
+
+> **Dica:** O intervalo mínimo entre um envio e o reenvio é definido na configuração da conta. Existe também um tempo máximo de espera: mesmo que a conta configure um intervalo maior que esse teto, o reenvio é liberado ao atingi-lo. As opções desaparecem assim que o veículo confirma a execução do comando.
+
 **Desligar pânico**
 
 Cancela um acionamento de pânico ativo no veículo.
@@ -296,6 +350,9 @@ Como usar:
 | Campo / Filtro                           | O que faz                                                                              |
 | ---------------------------------------- | -------------------------------------------------------------------------------------- |
 | **Seleção de veículos (painel lateral)** | Define quais veículos são exibidos no mapa e na tabela de monitoramento                |
+| **Painel de Status (situação do veículo)** | Filtra o mapa pelas situações escolhidas e mostra, por situação, quantos veículos estão selecionados e quantos existem na frota |
+| **Limpar filtros**                       | Remove de uma vez todas as situações marcadas no Painel de Status                      |
+| **Mostrar/ocultar rótulos**              | Alterna o Painel de Status entre a versão estreita (só ícones) e a versão larga (com o nome da situação) |
 | **Ir para Endereço**                     | Centraliza o mapa em um endereço digitado manualmente                                  |
 | **Áreas de Contenção**                   | Ativa ou desativa a exibição de cada área geográfica cadastrada sobre o mapa           |
 | **Pontos de Interesse**                  | Ativa ou desativa a exibição de cada ponto de referência cadastrado sobre o mapa       |
@@ -380,6 +437,20 @@ Como usar:
 3. Para selecionar todas as rotas de uma vez, marque a caixa na linha de cabeçalho da tabela.
 
 > **Dica:** Ao selecionar uma única rota, o painel lateral exibe um resumo de estatísticas com distância, velocidade média, velocidade máxima, tempo em movimento e tempo parado com motor ligado.
+
+---
+
+**Consultar avisos ocorridos ao longo da rota**
+
+Os eventos registrados durante o percurso — excesso de velocidade, entrada e saída de área, frenagem brusca, entre outros — aparecem como marcadores sobre a linha da rota.
+
+Como usar:
+
+1. Marque a rota desejada na tabela para desenhá-la no mapa.
+2. Localize os marcadores de aviso posicionados ao longo do traçado.
+3. Clique em um marcador para abrir a janela com os dados do evento: tipo de aviso, data e hora, endereço e demais informações registradas.
+
+> **Dica:** Os dados de cada aviso passaram a ser carregados diretamente da base de eventos no momento em que a rota é aberta. Marcadores que antes apareciam com informações incompletas ou em branco agora trazem o conteúdo correto do evento.
 
 ---
 
@@ -867,6 +938,8 @@ Como usar:
 
 > **Dica:** Selecionar todas as categorias e usar o filtro de veículos específicos é útil quando se deseja analisar o histórico completo de um veículo.
 
+> **Atenção:** Os alertas de parada agora aparecem como dois filtros distintos em **Gestão de Frota**: **Parada em andamento**, que sinaliza o veículo ainda parado além do tempo crítico, e **Alerta crítico de parada**, que sinaliza o fechamento do ciclo de parada. Antes os dois compartilhavam o mesmo rótulo e ficava impossível distinguir um do outro na busca.
+
 **Filtrar somente avisos com anotações**
 
 Exibe apenas os avisos que já possuem alguma anotação registrada pela equipe.
@@ -904,6 +977,18 @@ Como usar:
 3. Clique no botão de **download** sobre a imagem para salvá-la no computador.
 
 > **Dica:** Esse comportamento também vale para eventos com dispositivo de vídeo externo (Hikvision/Jimi) que antes só apareciam corretamente para alguns tipos de aviso — agora qualquer aviso vinculado a esses dispositivos é reconhecido como tendo mídia disponível.
+
+**Consultar aviso quando nenhuma câmera é encontrada**
+
+Quando o veículo tem câmera cadastrada, mas nenhuma transmissão é localizada para aquele evento, a tela informa a situação em vez de deixar o painel em branco.
+
+Como usar:
+
+1. Abra os detalhes do aviso pelo ícone de **câmera de vídeo** ou **sino** na coluna de ações.
+2. Se nenhuma câmera for localizada, um aviso em destaque com o ícone de triângulo informa que as câmeras não foram encontradas.
+3. Logo abaixo, os dados do aviso — data, endereço, placa, grupo, velocidade e motorista — continuam sendo exibidos normalmente.
+
+> **Dica:** Antes essa combinação deixava o painel vazio. Agora, mesmo sem imagem ou vídeo, as informações do evento continuam disponíveis para registrar a anotação e verificar a ocorrência.
 
 **Registrar anotações em um aviso**
 
@@ -993,7 +1078,7 @@ Como usar:
 | **Hora Final**               | Define o horário de encerramento dentro da data final (formato HH:mm:ss)                                                                                                                                  |
 | **Controle de Área e Ponto** | Filtra eventos de entrada/saída de áreas, pontos de referência, tempo de permanência e tempo fora da base                                                                                                 |
 | **Avisos de Segurança**      | Filtra eventos como excesso de velocidade (normal e sob chuva), velocidade em área, tempo de percurso excedido, parada insuficiente, aceleração brusca, frenagem brusca, aceleração vertical e tombamento |
-| **Gestão de Frota**          | Filtra eventos de bateria, alarme disparado, pânico ativado/desativado, lembrete de manutenção preventiva e itens não conformes de checklist                                                              |
+| **Gestão de Frota**          | Filtra eventos de bateria, alarme disparado, pânico ativado/desativado, lembrete de manutenção preventiva, itens não conformes de checklist e os dois alertas de parada (**Parada em andamento** e **Alerta crítico de parada**) |
 | **Somente com anotações**    | Exibe apenas avisos que possuem pelo menos uma anotação registrada                                                                                                                                        |
 | **Origem do Alerta**         | Coluna da tabela que indica se o aviso partiu de um Módulo, do Videomonitoramento ou do Sistema. A tabela pode ser ordenada por essa coluna clicando no cabeçalho                                        |
 
@@ -1056,6 +1141,8 @@ Como usar:
 5. Clique em **Buscar** para aplicar os filtros.
 
 > **Dica:** Deixar todos os campos de evento sem seleção inclui todos os tipos de evento na busca. Selecione categorias específicas quando quiser focar em um tipo de alerta.
+
+> **Atenção:** O campo **Eventos Gerados pelo Sistema** ganhou o filtro **Sem comunicação**, que traz os veículos que deixaram de reportar posição, e passou a separar os alertas de parada em dois filtros distintos — **Parada em andamento**, para o veículo ainda parado além do tempo crítico, e **Alerta crítico de parada**, para o fechamento do ciclo de parada.
 
 **Visualizar detalhes de um aviso**
 
@@ -1162,7 +1249,7 @@ Como usar:
 | **Data Final**                   | Define a data de encerramento do período de consulta                                                                                                                                                                                                                                                                                          |
 | **Horário Final**                | Define o horário de encerramento dentro da data final (formato HH:mm:ss)                                                                                                                                                                                                                                                                      |
 | **Eventos Gerados pelo Módulo**  | Filtra eventos registrados diretamente pelo equipamento embarcado: aceleração brusca, frenagem brusca, aceleração vertical, aceleração lateral, falha de alternador, arrancada em segunda marcha, excesso de marcha lenta, temperatura alta do motor, falha de pressão de óleo, embreagem pressionada, giro alto e velocidade em ponto neutro |
-| **Eventos Gerados pelo Sistema** | Filtra eventos calculados pela plataforma: excesso de velocidade (normal e sob chuva), parada crítica, aceleração e desaceleração brusca calculadas, ignição sem motor, controle de periféricos, entrada e saída de manutenção e intrajornada do motorista                                                                                    |
+| **Eventos Gerados pelo Sistema** | Filtra eventos calculados pela plataforma: excesso de velocidade (normal e sob chuva), **Parada em andamento** e **Alerta crítico de parada**, aceleração e desaceleração brusca calculadas, ignição sem motor, controle de periféricos, entrada e saída de manutenção, intrajornada do motorista e **Sem comunicação**                     |
 | **ADAS e Fadiga**                | Filtra eventos de sensores de segurança ativa: sonolência, não olhar para frente, desvio de atenção, uso de celular, cigarro, alerta de colisão, código numérico, cinto de segurança, colisão frontal, colisão com pedestres, desvio de faixas, risco de colisão frontal e botão SOS                                                          |
 | **Somente com anotações**        | Exibe apenas avisos que possuem pelo menos uma anotação registrada                                                                                                                                                                                                                                                                            |
 

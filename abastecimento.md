@@ -26,7 +26,7 @@ Aparece somente quando há resultados carregados. Oferece as opções de exporta
 
 **Lista de Abastecimentos**
 
-Exibida após a busca. Apresenta os registros organizados conforme o agrupamento selecionado (por dia, por veículo ou por motorista). Cada grupo exibe uma tabela com as colunas: data e hora, veículo, motorista, endereço ou ponto de interesse, hodômetro reportado, tanque completo, tipo de combustível, litros abastecidos, valor por litro e valor total. A tabela possui paginação e permite ordenação por coluna.
+Exibida após a busca. Apresenta os registros organizados conforme o agrupamento selecionado (por dia, por veículo ou por motorista). Cada grupo exibe uma tabela com as colunas: data e hora, veículo, motorista, endereço ou ponto de interesse, **hodômetro reportado**, **horímetro reportado**, tanque completo, tipo de combustível, litros abastecidos, valor por litro e valor total. A tabela possui paginação e permite ordenação por coluna.
 
 ---
 
@@ -97,7 +97,19 @@ Como usar:
 3. Uma janela será aberta exibindo o texto da observação registrada.
 4. Feche a janela quando terminar.
 
-> **Dica:** Se o abastecimento não tiver observação registrada, a janela será aberta com o campo em branco.
+> **Dica:** Se o abastecimento não tiver observação registrada, a janela será aberta com o campo em branco. A observação também acompanha as exportações em PDF e Excel, como última coluna do arquivo.
+
+**Conferir hodômetro e horímetro reportados**
+
+Mostra, lado a lado, a leitura do hodômetro e a do horímetro informadas no momento do abastecimento.
+
+Como usar:
+
+1. Realize a busca para carregar os registros.
+2. Na tabela, consulte as colunas **Hodômetro Reportado** e **Horímetro Reportado**.
+3. Clique no cabeçalho de qualquer uma das duas para ordenar os registros por aquela leitura.
+
+> **Dica:** O aplicativo do motorista exige o preenchimento de apenas uma das duas leituras. A que não foi informada aparece como "----" em vez de 0,00, deixando claro que o dado não foi reportado — e não que a leitura era zero.
 
 **Gerenciar arquivos de um abastecimento**
 
@@ -138,7 +150,7 @@ Como usar:
    - **Excel** — gera uma planilha com todos os dados para análise.
 4. O arquivo será baixado automaticamente.
 
-> **Dica:** O arquivo exportado contém as mesmas colunas da tabela: data e hora, veículo, motorista, hodômetro reportado, tanque completo, tipo de combustível, litros abastecidos, valor por litro, valor total e endereço ou ponto de interesse. O agrupamento também é refletido no arquivo.
+> **Dica:** O arquivo exportado contém as mesmas colunas da tabela: data e hora, veículo, motorista, hodômetro reportado, horímetro reportado, tanque completo, tipo de combustível, litros abastecidos, valor por litro, valor total, endereço ou ponto de interesse e, como última coluna, a observação registrada. O agrupamento também é refletido no arquivo.
 
 **Cadastrar novo ponto de interesse a partir do formulário**
 
@@ -169,6 +181,8 @@ Como usar:
 | **Veículo (registro)** | Veículo que recebeu o abastecimento |
 | **Motorista (registro)** | Motorista responsável pelo abastecimento |
 | **Hodômetro** | Leitura do odômetro do veículo no momento do abastecimento, informada manualmente |
+| **Hodômetro Reportado** (coluna) | Leitura do odômetro informada no registro; exibe "----" quando não foi preenchida |
+| **Horímetro Reportado** (coluna) | Leitura do horímetro informada no registro; exibe "----" quando não foi preenchida |
 | **Ponto de Interesse** | Local de referência onde o abastecimento foi realizado, selecionado a partir dos pontos cadastrados |
 | **Endereço** | Endereço do local de abastecimento, quando não há ponto de interesse correspondente |
 | **Tipo de Combustível** | Tipo do combustível ou recarga: Gasolina Comum, Gasolina Aditivada, Gasolina Premium, Etanol, Etanol Aditivado, Diesel S500, Diesel S10, Diesel Aditivado, Diesel Premium, GNV, ARLA 32 ou Recarga Elétrica |

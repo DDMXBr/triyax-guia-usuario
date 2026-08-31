@@ -157,7 +157,7 @@ Localizado no topo da tela, abre o formulário para cadastrar um novo plano de m
 
 **Painel de Filtros**
 
-Painel expansível logo abaixo do botão principal. Contém checkboxes para filtrar por situação das manutenções e um botão para selecionar veículos específicos. Após configurar os filtros, clique em **Buscar** para aplicar.
+Painel expansível logo abaixo do botão principal. Contém checkboxes para filtrar por situação das manutenções, os campos **Data Inicial** e **Data Final** para restringir o período consultado e um botão para selecionar veículos específicos. Após configurar os filtros, clique em **Buscar** para aplicar.
 
 **Barra de ações da tabela**
 
@@ -165,7 +165,7 @@ Dois ícones acima da tabela: **download** (exportar para planilha) e **upload**
 
 **Tabela de manutenções**
 
-Exibe todas as manutenções conforme os filtros aplicados, com as colunas: **Situação**, **Código**, **Grupo**, **Tipo de Oficina**, **Veículo**, **Placa**, **Manutenção**, **Tipo**, **Status** e **Data da Próxima Manutenção**. A coluna **Situação** indica se a manutenção está cadastrada, pendente, atrasada ou realizada. A coluna **Status** exibe o tempo, a quilometragem ou as horas restantes/decorridas. Um ícone de repetição aparece na coluna **Situação** quando a manutenção está configurada para se repetir automaticamente após cada execução. As colunas são ordenáveis clicando no cabeçalho.
+Exibe todas as manutenções conforme os filtros aplicados, com as colunas: **Situação**, **Código**, **Data de Início da Manutenção**, **Grupo**, **Tipo de Oficina**, **Veículo**, **Placa**, **Manutenção**, **Tipo**, **Status** e **Data da Próxima Manutenção**. A coluna **Situação** indica se a manutenção está cadastrada, pendente, atrasada ou realizada. A coluna **Data de Início da Manutenção** é justamente o campo consultado pelos filtros de período, permitindo conferir na própria tabela o resultado do filtro; quando a data não existe, a célula mostra "---". A coluna **Status** exibe o tempo, a quilometragem ou as horas restantes/decorridas — nas manutenções realizadas, ela também traz a data da execução. Um ícone de repetição aparece na coluna **Situação** quando a manutenção está configurada para se repetir automaticamente após cada execução. A coluna **Placa** tem largura limitada: contas que gravam o número de série nesse campo não deformam mais a tabela, e o valor completo aparece ao passar o cursor sobre a célula. As colunas são ordenáveis clicando no cabeçalho.
 
 **Ações por linha**
 
@@ -212,10 +212,13 @@ Como usar:
    - **Realizadas** — manutenções já executadas.
    - **Cadastradas** — planos cadastrados ainda dentro do prazo.
    - **Realização imediata** — manutenções pendentes, próximas do vencimento.
-2. Para filtrar por veículo, clique no ícone de seleção de veículos e escolha os desejados na janela que abrir.
-3. Clique em **Buscar** para atualizar a tabela.
+2. Informe a **Data Inicial** e a **Data Final** para restringir a busca a um período. As datas são comparadas com a coluna **Data de Início da Manutenção**.
+3. Para filtrar por veículo, clique no ícone de seleção de veículos e escolha os desejados na janela que abrir.
+4. Clique em **Buscar** para atualizar a tabela.
 
 > **Dica:** Use o checkbox **Selecionar/Desselecionar todos** para marcar ou desmarcar todas as situações de uma vez. As situações podem ser combinadas livremente — por exemplo, marcar **Atrasadas** e **Realização imediata** ao mesmo tempo exibe corretamente os dois grupos de manutenções pendentes de atenção.
+
+> **Dica:** A busca e a ordenação passaram a ser processadas no servidor, e a tabela traz apenas a página que está sendo exibida. Isso deixa a tela rápida mesmo em contas com muitas manutenções cadastradas: ao trocar de página, ordenar por uma coluna ou mudar a quantidade de itens por página, os dados são buscados novamente já filtrados.
 
 ---
 
@@ -251,10 +254,12 @@ Exibe todas as informações do plano de manutenção e o histórico de execuç�
 Como usar:
 
 1. Clique no ícone de **informações** (quadrado com "i") na linha da manutenção desejada.
-2. A janela de detalhes exibe: código, nome, veículo, categoria, datas, configurações de hodômetro e horímetro, e-mail de aviso, repetição, responsável, centro de custo, número da OS, tipo, custo total, oficina e observações.
+2. A janela de detalhes exibe: código, nome, veículo, categoria, datas, configurações de hodômetro e horímetro (incluindo o **tipo de horímetro** escolhido no cadastro — Motor, RPM, Tensão de bateria ou Tempo de uso), **e-mail de aviso**, repetição, responsável, centro de custo, número da OS, tipo, custo total, oficina e observações.
 3. Feche a janela clicando no ícone de fechar no canto superior.
 
 > **Dica:** A seção de detalhes mostra tanto as configurações originais do plano (intervalos, limites) quanto os dados registrados na última execução, facilitando a conferência.
+
+> **Atenção:** O tipo de horímetro, o e-mail de aviso e a marcação de repetição voltaram a ser exibidos corretamente nos detalhes e a acompanhar a manutenção quando ela é reportada — antes esses três campos apareciam em branco e eram apagados no registro da execução.
 
 ---
 
@@ -288,15 +293,17 @@ Como usar:
 
 **Exportar manutenções para planilha**
 
-Gera um arquivo `.xlsx` com todas as manutenções atualmente exibidas na tabela.
+Gera um arquivo `.xlsx` com todas as manutenções que atendem aos filtros aplicados — e não apenas as da página que está aberta.
 
 Como usar:
 
-1. Aplique os filtros desejados e clique em **Buscar** para carregar os dados.
+1. Aplique os filtros desejados (situação, período e veículos) e clique em **Buscar** para carregar os dados.
 2. Clique no ícone de **download** acima da tabela.
-3. O arquivo é baixado automaticamente com as colunas: Situação, Código, Veículo, Manutenção, Status, Realizada, Data/Hora do reporte, hodômetros, horímetros, responsável, centro de custo, OS, tipo, custo, oficina e descrição do serviço.
+3. O arquivo é baixado automaticamente com as colunas: Situação, Código, Veículo, Manutenção, Status, Realizada, Repetir, Data/Hora do reporte, hodômetros, horímetros, responsável, centro de custo, OS, tipo, custo, oficina e descrição do serviço.
 
 > **Dica:** Filtre antes de exportar para gerar relatórios específicos — por exemplo, apenas as manutenções atrasadas ou apenas as de um grupo de veículos.
+
+> **Atenção:** Existe um limite de registros por arquivo. Se o filtro selecionar mais manutenções do que cabem na exportação, uma mensagem avisa que o arquivo saiu parcial e informa quantos registros foram exportados do total encontrado. Nesse caso, estreite o período ou o conjunto de veículos e exporte em partes.
 
 ---
 
@@ -333,6 +340,8 @@ Como usar:
 | Filtro: Realizadas | Exibe apenas manutenções já executadas |
 | Filtro: Cadastradas | Exibe apenas planos dentro do prazo (ainda não vencidos) |
 | Filtro: Realização imediata | Exibe manutenções próximas do vencimento |
+| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada |
+| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada |
 | Seleção de veículos | Restringe a lista a um ou mais veículos específicos |
 
 [↑ Voltar ao Índice](index.md#índice)
@@ -355,9 +364,9 @@ Esta tela registra manutenções não planejadas realizadas nos veículos da fro
 
 No topo da tela, abre o formulário para registrar uma nova manutenção corretiva.
 
-**Painel de seleção de veículos**
+**Painel de Filtros**
 
-Painel expansível com uma árvore de veículos organizada por grupos. Marque os veículos desejados e clique em **Buscar** para carregar apenas as manutenções desses veículos.
+Painel expansível com os campos **Data Inicial** e **Data Final**, para restringir o período consultado, e um botão de seleção de veículos que abre a mesma janela usada na Manutenção Preventiva. Escolha o período e os veículos e clique em **Buscar**.
 
 **Barra de ações da tabela**
 
@@ -365,7 +374,7 @@ Um ícone de **download** acima da tabela permite exportar os registros exibidos
 
 **Tabela de manutenções corretivas**
 
-Exibe os registros conforme a seleção de veículos, com as colunas: **Código**, **Data de Início**, **Data de Fim**, **Tipo de Oficina**, **Grupo**, **Veículo**, **Placa**, **Manutenção** e **Tipo**. As colunas são ordenáveis clicando no cabeçalho.
+Exibe os registros conforme os filtros aplicados, com as colunas: **Código**, **Período**, **Tipo de Oficina**, **Grupo**, **Veículo**, **Placa**, **Manutenção** e **Tipo**. A coluna **Período** reúne a data de início e a data de fim empilhadas, cada uma com seu ícone — passe o cursor sobre a linha para confirmar qual é qual — e ordena pela data de início, que é também a consultada pelos filtros de período. A coluna **Placa** tem largura limitada, para que contas que gravam o número de série nesse campo não deformem a tabela. As colunas são ordenáveis clicando no cabeçalho.
 
 **Ações por linha**
 
@@ -405,17 +414,20 @@ Como usar:
 
 ---
 
-**Filtrar manutenções por veículo**
+**Filtrar manutenções por período e veículo**
 
-Restringe a tabela às manutenções de veículos específicos.
+Restringe a tabela às manutenções de um intervalo de datas e de veículos específicos.
 
 Como usar:
 
-1. No painel **Veículos**, navegue pela árvore de grupos e marque os veículos desejados.
-2. Clique em **Buscar** para carregar apenas os registros dos veículos selecionados.
-3. Para ver todos os veículos novamente, desmarque as seleções e clique em **Buscar**.
+1. No painel **Filtro**, informe a **Data Inicial** e a **Data Final**. As datas são comparadas com a data de início exibida na coluna **Período**.
+2. Clique no ícone de seleção de veículos (ícone de carros) para abrir a janela de escolha de veículos, marque os desejados e confirme.
+3. Clique em **Buscar** para carregar os registros correspondentes.
+4. Para ver todos os veículos novamente, limpe a seleção e clique em **Buscar**.
 
-> **Dica:** A árvore organiza os veículos por grupos, facilitando a seleção por frota ou área operacional.
+> **Dica:** A seleção de veículos passou a usar a mesma janela da Manutenção Preventiva, no lugar da árvore que ficava embutida na tela — o comportamento é idêntico nas duas telas.
+
+> **Dica:** A busca, a paginação e a ordenação são processadas no servidor, e a tabela carrega apenas a página exibida. Trocar de página, ordenar por uma coluna ou alterar a quantidade de itens por página refaz a consulta já com os filtros aplicados.
 
 ---
 
@@ -463,15 +475,17 @@ Como usar:
 
 **Exportar manutenções para planilha**
 
-Gera um arquivo `.xlsx` com todos os registros atualmente exibidos na tabela.
+Gera um arquivo `.xlsx` com todos os registros que atendem aos filtros aplicados — e não apenas os da página que está aberta.
 
 Como usar:
 
-1. Filtre os veículos desejados usando o painel de seleção e clique em **Buscar**.
+1. Informe o período e selecione os veículos desejados no painel **Filtro** e clique em **Buscar**.
 2. Clique no ícone de **download** acima da tabela.
 3. O arquivo é baixado automaticamente com as colunas: Código, Data início, Data fim, Grupo, Veículo, Placa, Manutenção, Categoria, Hodômetro, Horímetro, Responsável, Centro de custo, OS, Custo, Oficina, Descrição do serviço e Observações.
 
 > **Dica:** Selecione apenas os veículos relevantes antes de exportar para gerar relatórios mais focados por frota, período ou tipo de manutenção.
+
+> **Atenção:** Existe um limite de registros por arquivo. Se o filtro selecionar mais manutenções do que cabem na exportação, uma mensagem avisa que o arquivo saiu parcial e informa quantos registros foram exportados do total encontrado. Nesse caso, estreite o período ou o conjunto de veículos e exporte em partes.
 
 ---
 
@@ -497,7 +511,9 @@ Como usar:
 | Oficina | Nome da oficina onde a manutenção foi realizada (com busca e opção de cadastrar nova); a busca inclui áreas cadastradas como oficina ou como concessionária |
 | Descrição do serviço | Detalhamento técnico do que foi executado |
 | Observação | Campo livre para anotações complementares |
-| Seleção de veículos (filtro) | Árvore para escolher quais veículos terão suas manutenções exibidas na tabela |
+| Filtro: Data Inicial | Restringe a busca às manutenções cuja data de início seja igual ou posterior à data informada |
+| Filtro: Data Final | Restringe a busca às manutenções cuja data de início seja igual ou anterior à data informada |
+| Seleção de veículos (filtro) | Abre a janela de escolha de veículos, a mesma usada na Manutenção Preventiva, para definir quais veículos terão suas manutenções exibidas na tabela |
 
 [↑ Voltar ao Índice](index.md#índice)
 

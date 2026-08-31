@@ -187,6 +187,7 @@ No topo da tela ficam as ações principais:
 A área principal lista todos os agendamentos já criados, com as colunas:
 
 - **Caixa de seleção** — marca o agendador para exclusão. A caixa no cabeçalho marca ou desmarca todos de uma vez.
+- **Tipo** — indica se o agendamento foi montado sobre **Veículos** escolhidos individualmente ou sobre **Grupos** de veículos.
 - **Periodicidade de Envio** — com que frequência os relatórios são enviados (Diário, Semanal ou Mensal).
 - **Periodicidade de Análise** — qual período de dados cada envio abrange (Último dia, Última semana ou Último mês).
 - **E-mails** — os endereços que recebem os relatórios, exibidos em etiquetas individuais.
@@ -196,7 +197,7 @@ Quando não há agendadores cadastrados, a tabela exibe uma mensagem informando 
 
 **Janela de criação/edição**
 
-Ao clicar em **Novo Agendador** (ou no lápis de edição), abre-se uma janela com um assistente em três etapas: **Veículos**, **Configurações** e **Concluir**. Os botões **Anterior** e **Próximo** navegam entre as etapas, e o botão de avançar só é liberado quando a etapa atual está completa.
+Ao clicar em **Novo Agendador** (ou no lápis de edição), abre-se uma janela com um assistente em três etapas: **Veículos** (ou **Grupos**), **Configurações** e **Concluir**. Na primeira etapa há um seletor com as opções **Veículos** e **Grupos**, que define sobre o quê o agendamento será montado; o nome da etapa acompanha a opção escolhida. Os botões **Anterior** e **Próximo** navegam entre as etapas, e o botão de avançar só é liberado quando a etapa atual está completa.
 
 ---
 
@@ -209,12 +210,25 @@ Programa o envio automático e recorrente de um ou mais relatórios para os e-ma
 Como usar:
 
 1. Clique no botão **Novo Agendador**.
-2. Na etapa **Veículos**, marque na árvore os veículos ou grupos que farão parte dos relatórios e clique em **Próximo**.
+2. Na primeira etapa, escolha no seletor se o agendamento será por **Veículos** ou por **Grupos**, marque na árvore os itens que farão parte dos relatórios e clique em **Próximo**.
 3. Na etapa **Configurações**, informe a **Hora Inicial** e a **Hora Final**, escolha a **Periodicidade de Envio**, a **Periodicidade de Análise** e adicione ao menos um e-mail de destino. Clique em **Próximo**.
 4. Na etapa final, abra cada tipo de relatório desejado, marque **Habilitar agendador** e escolha o formato de saída (**PDF**, **Excel** ou ambos).
 5. Clique em **Registrar Agendador** para concluir. Uma mensagem confirma o cadastro e o novo agendador aparece na tabela.
 
 > **Dica:** você pode habilitar vários tipos de relatório em um mesmo agendador — todos serão enviados juntos, na mesma periodicidade, para os mesmos e-mails. Se precisar de periodicidades diferentes, crie agendadores separados.
+
+**Agendar relatórios por grupos de veículos**
+
+Monta o agendamento sobre grupos inteiros, em vez de listar veículo por veículo. Assim, veículos incluídos ou removidos de um grupo depois passam a ser considerados automaticamente nos próximos envios.
+
+Como usar:
+
+1. Clique em **Novo Agendador** (ou edite um agendador existente pelo ícone de lápis).
+2. Na primeira etapa, clique na opção **Grupos** do seletor no topo. A árvore passa a exibir apenas os grupos, sem os veículos dentro deles.
+3. Marque os grupos desejados e siga normalmente para as etapas de **Configurações** e **Concluir**.
+4. Na tabela de agendadores, a coluna **Tipo** passa a indicar **Grupos** para esse agendamento.
+
+> **Dica:** trocar entre **Veículos** e **Grupos** limpa a seleção feita na outra opção — um agendamento é por veículos ou por grupos, nunca pelos dois ao mesmo tempo. Use grupos quando a frota muda com frequência e veículos quando o conjunto é fixo e pequeno.
 
 **Configurar a periodicidade e o horário de envio**
 
@@ -273,6 +287,7 @@ Como usar:
 
 | Campo / Filtro | O que faz |
 |---|---|
+| **Veículos / Grupos** (seletor) | Define se o agendamento é montado sobre veículos escolhidos individualmente ou sobre grupos inteiros. Trocar a opção limpa a seleção feita na outra. |
 | **Hora Inicial** / **Hora Final** | Define a faixa de horário do dia considerada na análise dos relatórios. |
 | **Considerar apenas faixa de horário** | Restringe a análise à faixa de horário informada em cada dia do período. |
 | **Periodicidade de Envio** | Frequência de envio dos relatórios: Diário, Semanal ou Mensal. |
