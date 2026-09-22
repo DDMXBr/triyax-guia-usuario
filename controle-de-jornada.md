@@ -207,7 +207,7 @@ Como usar:
    - **GetScale** — equipamento com interface GetScale
    - **Smartphone / Tablet** — dispositivo móvel com aplicativo
 4. No campo **Modelo**, selecione o modelo de jornada compatível com o tipo escolhido.
-5. A tabela de mensagens será preenchida automaticamente com os eventos disponíveis para o tipo e modelo selecionados. Para cada evento, edite o texto do campo **Mensagem** conforme necessário.
+5. A tabela de mensagens será preenchida automaticamente com os eventos disponíveis para o tipo e modelo selecionados. Para cada evento, edite o texto do campo **Mensagem** conforme necessário. Enquanto o campo **Mensagem** estiver vazio, ele mostra como referência o nome padrão do evento (no mesmo estilo do campo **Código**) — esse texto de referência some assim que você começa a digitar.
 6. Acesse a aba **Veículos** e selecione os veículos que receberão esta configuração.
 7. Clique em **Salvar** para concluir a criação.
 
@@ -275,7 +275,7 @@ Como usar:
 | **Nome**         | Identifica a configuração na lista; use um nome descritivo que indique o tipo de equipamento ou frota                                                   |
 | **Tipo**         | Define o modelo de equipamento instalado nos veículos: TD50/TD60, KNOV, GetScale ou Smartphone/Tablet                                                   |
 | **Modelo**       | Define o modo de operação dentro do tipo escolhido; as opções variam conforme o tipo selecionado                                                        |
-| **Mensagem**     | Texto que será exibido no equipamento do motorista para cada evento de jornada; editável para todos os tipos                                            |
+| **Mensagem**     | Texto que será exibido no equipamento do motorista para cada evento de jornada; editável para todos os tipos. Quando vazio, mostra como referência o nome padrão do evento, no mesmo estilo do campo **Código**                                            |
 | **Código**       | Identificação interna do evento de jornada; fixo para TD50, KNOV e GetScale, selecionável para Smartphone/Tablet                                        |
 | **Situação**     | Status atual do envio da configuração para o veículo: Não Enviado, Enviado, Confirmado, Tentativas Excedidas, Expirado, Cancelado ou Inválido           |
 

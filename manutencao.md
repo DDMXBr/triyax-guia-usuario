@@ -157,7 +157,7 @@ Localizado no topo da tela, abre o formulário para cadastrar um novo plano de m
 
 **Painel de Filtros**
 
-Painel expansível logo abaixo do botão principal. Contém checkboxes para filtrar por situação das manutenções, os campos **Data Inicial** e **Data Final** para restringir o período consultado e um botão para selecionar veículos específicos. Após configurar os filtros, clique em **Buscar** para aplicar.
+Painel expansível logo abaixo do botão principal. Contém checkboxes para filtrar por situação das manutenções, os campos **Data Inicial** e **Data Final** para restringir o período consultado e um botão para selecionar veículos específicos. Os campos de data ficam empilhados, um abaixo do outro. Após configurar os filtros, clique em **Buscar** para aplicar.
 
 A tela já abre com o **último mês** preenchido nos campos de data e com a tabela carregada, sem precisar de uma busca manual. Cada campo de data traz um botão **x** para limpá-lo, liberando aquela ponta do período.
 
@@ -371,7 +371,7 @@ No topo da tela, abre o formulário para registrar uma nova manutenção correti
 
 **Painel de Filtros**
 
-Painel expansível com os campos **Data Inicial** e **Data Final**, para restringir o período consultado, e um botão de seleção de veículos que abre a mesma janela usada na Manutenção Preventiva. Escolha o período e os veículos e clique em **Buscar**.
+Painel expansível com os campos **Data Inicial** e **Data Final**, para restringir o período consultado, e um botão de seleção de veículos que abre a mesma janela usada na Manutenção Preventiva. Os campos de data ficam empilhados, um abaixo do outro. Escolha o período e os veículos e clique em **Buscar**.
 
 A tela já abre com o **último mês** preenchido nos campos de data e com a tabela carregada, sem precisar de uma busca manual. Cada campo de data traz um botão **x** para limpá-lo, liberando aquela ponta do período.
 

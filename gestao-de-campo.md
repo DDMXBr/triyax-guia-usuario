@@ -18,7 +18,7 @@ Esta tela permite acompanhar em tempo real a localização e a situação de tod
 
 **Painel Lateral de Veículos**
 
-Acessado pelo botão **Veículos** na barra de ações. Desliza a partir da direita da tela e exibe a lista de veículos organizada em grupos. Permite selecionar quais veículos serão exibidos no mapa por meio de caixas de seleção.
+Acessado pelo botão **Veículos** na barra de ações. Desliza a partir da direita da tela e exibe a lista de veículos organizada em grupos. Permite selecionar quais veículos serão exibidos no mapa por meio de caixas de seleção. No topo do painel fica o botão **Enquadrar** (ícone de setas apontando para um ponto), que ajusta o mapa para mostrar todos os veículos selecionados de uma vez, ao lado do botão **Fechar**. Cada veículo marcado exibe, ao lado do nome, um ícone de mira (**Centralizar Veículo**) que centraliza o mapa somente naquele veículo, sem alterar a seleção dos demais.
 
 **Painel de Status (lado esquerdo do mapa)**
 
@@ -83,6 +83,32 @@ Como usar:
 4. O mapa será atualizado automaticamente para exibir apenas os veículos selecionados.
 
 > **Dica:** Selecione um grupo inteiro marcando a caixa do grupo para incluir todos os veículos daquele conjunto de uma só vez.
+
+**Centralizar o mapa em um único veículo selecionado**
+
+Foca o mapa em um veículo específico dentre os selecionados, sem alterar a seleção dos demais veículos marcados no painel lateral.
+
+Como usar:
+
+1. Clique no botão **Veículos** na barra de ações para abrir o painel lateral.
+2. Marque a caixa de seleção do veículo desejado — o ícone de centralizar só aparece em veículos marcados.
+3. Clique no ícone de mira (**Centralizar Veículo**) ao lado do nome do veículo na árvore.
+4. O mapa é reposicionado e ampliado sobre aquele veículo, mantendo os demais veículos selecionados intactos.
+
+> **Dica:** Use este recurso quando quiser conferir de perto um veículo específico sem perder a seleção do restante da frota que está sendo monitorada.
+
+**Enquadrar todos os veículos selecionados**
+
+Ajusta automaticamente o zoom e a posição do mapa para exibir, de uma só vez, todos os veículos atualmente marcados no painel lateral.
+
+Como usar:
+
+1. Clique no botão **Veículos** na barra de ações para abrir o painel lateral.
+2. Selecione os veículos que deseja visualizar juntos no mapa.
+3. Clique no botão **Enquadrar** (ícone de setas apontando para um ponto) no topo do painel lateral.
+4. O mapa ajusta automaticamente o zoom e a posição para mostrar todos os veículos selecionados na tela.
+
+> **Dica:** Use este botão depois de selecionar um grupo inteiro de veículos para visualizá-los todos ao mesmo tempo, sem precisar ajustar o zoom manualmente.
 
 **Acompanhar a contagem de veículos por situação**
 
@@ -350,6 +376,8 @@ Como usar:
 | Campo / Filtro                           | O que faz                                                                              |
 | ---------------------------------------- | -------------------------------------------------------------------------------------- |
 | **Seleção de veículos (painel lateral)** | Define quais veículos são exibidos no mapa e na tabela de monitoramento                |
+| **Centralizar Veículo**                  | Centraliza o mapa em um único veículo marcado, sem alterar a seleção dos demais       |
+| **Enquadrar**                            | Ajusta o zoom e a posição do mapa para mostrar todos os veículos selecionados de uma vez |
 | **Painel de Status (situação do veículo)** | Filtra o mapa pelas situações escolhidas e mostra, por situação, quantos veículos estão selecionados e quantos existem na frota |
 | **Limpar filtros**                       | Remove de uma vez todas as situações marcadas no Painel de Status                      |
 | **Mostrar/ocultar rótulos**              | Alterna o Painel de Status entre a versão estreita (só ícones) e a versão larga (com o nome da situação) |
@@ -390,9 +418,17 @@ Localizado sobre o mapa, à direita. Permite ativar ou desativar a exibição de
 
 Painel retrátil que aparece na parte inferior da tela. Exibe um gráfico com os dados de telemetria (velocidade, bateria e outros sensores) ao longo do tempo das rotas selecionadas. Pode ser aberto pelo botão **Exibir Telemetria** no painel lateral.
 
+**Resumo do Período**
+
+Card exibido no painel lateral assim que as rotas do dia selecionado terminam de carregar. Mostra três indicadores com ícone: o período analisado (em horas), o tempo ligado e o tempo desligado do veículo naquele período, com os tempos exibidos no formato hh:mm:ss.
+
 **Painel de Ajuste de Rota (Map Matching)**
 
 Painel flutuante ativado por um botão na tela. Permite processar as rotas selecionadas para encaixá-las na malha viária real, corrigindo imprecisões do GPS.
+
+**Botão Rota Ideal**
+
+Ícone flutuante no canto do mapa, ao lado do botão de Ajuste de Rota. Ativa ou desativa a camada de rota ideal: uma linha tracejada mostrando o trajeto mais curto possível entre o início e o fim de cada rota selecionada, para comparação com o trajeto realmente percorrido pelo veículo.
 
 ---
 
@@ -436,7 +472,22 @@ Como usar:
 2. As rotas marcadas serão desenhadas automaticamente no mapa.
 3. Para selecionar todas as rotas de uma vez, marque a caixa na linha de cabeçalho da tabela.
 
-> **Dica:** Ao selecionar uma única rota, o painel lateral exibe um resumo de estatísticas com distância, velocidade média, velocidade máxima, tempo em movimento e tempo parado com motor ligado.
+> **Dica:** Ao selecionar uma única rota, o painel lateral exibe um resumo com ícones trazendo distância, tempo ligado, tempo em movimento, tempo parado com motor ligado, velocidade média e velocidade máxima. Os tempos são exibidos no formato hh:mm:ss.
+
+---
+
+**Comparar a rota realizada com a rota ideal**
+
+Mostra, para cada rota, a distância e o tempo que seriam necessários pelo trajeto mais curto possível entre o início e o fim do percurso, permitindo comparar com o que foi realmente percorrido pelo veículo.
+
+Como usar:
+
+1. Clique no botão **Rota Ideal** no canto do mapa para ativar a comparação.
+2. Marque uma ou mais rotas na tabela. O mapa passa a exibir, junto com a rota real, uma linha tracejada com o trajeto ideal calculado.
+3. Na tabela, observe as colunas de distância e duração: o valor da rota ideal aparece logo abaixo do valor real de cada rota.
+4. Clique novamente no botão **Rota Ideal** para desativar a comparação e ocultar a linha tracejada e os valores ideais da tabela.
+
+> **Dica:** Quando o início e o fim de uma rota estão muito próximos um do outro — como em um trajeto de ida e volta ao mesmo local — não é possível calcular uma rota ideal. Nesses casos, um ícone de informação aparece no lugar do valor; passe o cursor sobre ele para ver o motivo.
 
 ---
 
@@ -494,7 +545,7 @@ Como usar:
 2. Clique no botão de exportação de planilha (ícone de arquivo Excel) na barra de ações acima da tabela.
 3. O arquivo será baixado automaticamente com o nome e a data da geração.
 
-> **Dica:** O arquivo exportado contém os registros de telemetria detalhados de cada rota selecionada, úteis para relatórios e auditorias.
+> **Dica:** O arquivo exportado contém os registros de telemetria detalhados de cada rota selecionada, úteis para relatórios e auditorias. As colunas de Tempo RPM Produtivo e Tempo RPM Improdutivo são exibidas no formato hh:mm:ss.
 
 ---
 
@@ -553,6 +604,7 @@ Como usar:
 | **Data**                         | Seleciona o dia a ser consultado; datas com rotas ficam destacadas no calendário     |
 | **Tabela de rotas**              | Lista todas as rotas do dia, com horário de início, horário de fim e distância       |
 | **Selecionar todos**             | Marca ou desmarca todas as rotas da tabela de uma vez                                |
+| **Rota Ideal**                   | Ativa ou desativa a linha tracejada do trajeto ideal no mapa e as colunas de distância e tempo ideais na tabela de rotas |
 | **Raio de busca (Map Matching)** | Define a tolerância em metros para encaixar pontos na malha viária                   |
 | **Modo básico / Modo completo**  | Controla a precisão do ajuste de rota: básico é mais rápido; completo é mais preciso |
 | **Áreas de Interesse**           | Ativa ou desativa a exibição de áreas geográficas cadastradas sobre o mapa           |
@@ -1477,6 +1529,8 @@ Como usar:
 
 > **Dica:** O sistema valida automaticamente o formato da área desenhada. Caso a área tenha muitos pontos, o sistema aplica um algoritmo de simplificação automática para reduzir a quantidade de coordenadas sem perder a forma geral.
 
+> **Atenção:** Se a conta tiver um número máximo de áreas de interesse configurado e esse limite já tiver sido atingido, o botão não abre o formulário — uma mensagem explica que o limite foi atingido. Contas sem limite configurado não têm essa restrição.
+
 ---
 
 **Configurar os dados da área (aba Configurações)**
@@ -1517,6 +1571,8 @@ Como usar:
 7. Clique em **Salvar** após definir o contorno.
 
 > **Dica:** O mapa também exibe outras áreas de interesse e pontos de interesse cadastrados como referência visual. Isso facilita verificar sobreposições ou adjacências ao desenhar uma nova área.
+
+> **Atenção:** Contas com um número máximo de vértices por área configurado recebem uma mensagem de erro ao tentar salvar uma área desenhada com mais pontos do que o permitido. Reduza a quantidade de vértices do contorno antes de salvar novamente.
 
 ---
 
@@ -1642,6 +1698,8 @@ Como usar:
 7. Clique em **Importar** para concluir.
 
 > **Dica:** O sistema valida automaticamente o número de coordenadas de cada área importada. Áreas que excedam o limite máximo permitido passarão por um algoritmo de simplificação automática para reduzir os pontos sem comprometer o formato da área.
+
+> **Atenção:** Se a conta tiver um número máximo de áreas de interesse configurado, e o total de áreas já cadastradas somado às áreas do arquivo ultrapassar esse limite, a importação inteira é bloqueada e uma mensagem indica o limite da conta.
 
 ---
 
@@ -1775,6 +1833,8 @@ Como usar:
 
 > **Dica:** O ponto só pode ser salvo depois que um marcador for posicionado no mapa. Se o nome estiver preenchido mas nenhum ponto tiver sido marcado no mapa, o sistema exibirá um aviso ao tentar salvar.
 
+> **Atenção:** Se a conta tiver um número máximo de pontos de interesse configurado e esse limite já tiver sido atingido, o botão não abre o formulário — uma mensagem explica que o limite foi atingido. Contas sem limite configurado não têm essa restrição.
+
 ---
 
 **Configurar os dados do ponto (aba Configurações)**
@@ -1784,7 +1844,7 @@ Define o nome, endereço de referência, opções de exibição e regras de aler
 Como usar:
 
 1. No campo **Nome**, informe um nome que identifique o ponto de interesse. Este campo é obrigatório.
-2. No campo **Endereço**, informe opcionalmente o endereço textual do local para referência interna.
+2. No campo **Endereço**, informe opcionalmente o endereço textual do local para referência interna — o campo exibe um texto de exemplo (placeholder) para orientar o preenchimento.
 3. Marque **Mostrar no Mapa Online** para que o ponto apareça sobre o mapa em tempo real.
 4. Marque **Mostrar no Painel de Legenda** para exibir o ponto no painel de legendas do mapa.
 5. Marque **Avisar ao Entrar no Ponto** para ativar notificações quando um veículo entrar no raio do ponto.
@@ -1862,6 +1922,8 @@ Como usar:
 
 > **Dica:** Diferente das áreas de interesse, os pontos importados via KML não possuem raio configurado no momento da importação. Após importar, edite cada ponto para definir o raio de atuação e as configurações de alerta desejadas.
 
+> **Atenção:** Se a conta tiver um número máximo de pontos de interesse configurado, e o total de pontos já cadastrados somado aos pontos do arquivo ultrapassar esse limite, a importação inteira é bloqueada e uma mensagem indica o limite da conta.
+
 ---
 
 **Gerenciar veículos processados**
@@ -1898,7 +1960,7 @@ Como usar:
 | Campo / Filtro                   | O que faz                                                                                                  |
 | -------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | **Nome**                         | Identifica o ponto na tabela, no mapa e nas notificações; campo obrigatório                                |
-| **Endereço**                     | Texto livre para registrar o endereço do local como referência interna; não afeta o posicionamento no mapa |
+| **Endereço**                     | Texto livre para registrar o endereço do local como referência interna; não afeta o posicionamento no mapa; o campo mostra um exemplo de preenchimento como texto de apoio |
 | **Mostrar no Mapa Online**       | Ativa ou desativa a exibição do ponto sobreposto ao Mapa Online em tempo real                              |
 | **Mostrar no Painel de Legenda** | Ativa ou desativa a exibição do ponto no painel de legendas do mapa                                        |
 | **Avisar ao Entrar no Ponto**    | Ativa notificação quando um veículo entra no raio de atuação do ponto                                      |
