@@ -51,6 +51,9 @@
   - [Alerta de Tempo de Percurso](configuracoes.md#alerta-de-tempo-de-percurso)
   - [Alerta de Aceleração](configuracoes.md#alerta-de-aceleração)
   - [Configuração de Pânico](configuracoes.md#configuração-de-pânico)
+- [Controle de Usuários](controle-de-usuarios.md)
+  - [Grupo de Operação](controle-de-usuarios.md#grupo-de-operação)
+  - [Logs](controle-de-usuarios.md#logs)
 
 ---
 
